@@ -1,0 +1,20 @@
+[workspace]
+
+[package]
+# Pseudo-package whose dependencies are imported and buckified
+name = "thiserror-demo"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+# Dummy target to keep Cargo happy
+[[bin]]
+name = "top"
+path = "top/empty.rs"
+
+# List of packages to be imported, with version constraints, features
+# and all options Cargo supports.
+[dependencies]
+thiserror = "2.0"
+
+[patch.crates-io]

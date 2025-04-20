@@ -1,0 +1,17 @@
+vendor = false
+
+[buck]
+generated_file_header = """
+#---------------------------------------------------------------------------#
+# Generated with Reindeer
+# Do not edit by hand.
+#---------------------------------------------------------------------------#
+"""
+
+buckfile_imports = """
+load("@prelude//rust:cargo_buildscript.bzl", "buildscript_run")
+load(":rule_macros.bzl", "demo_rust_binary", "demo_rust_library")
+"""
+
+rust_binary = "demo_rust_binary"
+rust_library = "demo_rust_library"
